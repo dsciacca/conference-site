@@ -1,0 +1,38 @@
+{% extends "navigation.html" %}
+<!--    Name: David Sciacca
+        Assignment: CS336 Assignment #10 Conference Web Site with Django
+        Created: July 26, 2017
+        Updated: August 27, 2017
+        Description: Registration page for users to register for conference and workshops on conference web site   -->
+{% load staticfiles %}
+{% block title %}Conference and Workshop Registration{% endblock %}
+{% block metatags %}
+        <meta name="keywords" content="register, registration, conference, training, business, workshops" />
+        <meta name="description" content="Registration page for users to register for conference and workshops" />
+        <meta name="robots" content="nofollow" />
+{% endblock %}
+{% block content %}
+        <main>
+            <h1>Register for the Conference Here</h1>
+            <form action="registration" method="POST">{% csrf_token %}
+                {{ registration_form.as_p }}
+                <input type="submit" value="Submit Registration" class="submit" id="registration"/>
+            </form>
+        </main>
+        <footer>
+            <address>
+                <small>
+                    Contact Information: <br />
+                    Phone: (555) 555-5555 <br />
+                    Email: <a href="mailto:skillsimprovement@conference.org">skillsimprovement@conference.org</a>
+                </small>
+            </address>
+            <small>
+                <p class="disclaimer">
+                    While this web site was created to satisfy the requirement of building a web site for an academic
+                    course at Regis University, the views and opinions expressed on this web site are solely those of
+                    the original author and do not necessarily represent the views and opinions of Regis University.
+                </p>
+            </small>
+        </footer>
+{% endblock %}

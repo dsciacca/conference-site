@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!--    Name: David Sciacca
+        Assignment: CS336 Assignment #5b Conference Web Site with JS and cookies
+        Created: July 26, 2017
+        Description: Error page displayed if user makes invalid choices during registration   -->
+{% load staticfiles %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="{% static 'js/main.js' %}"></script>
+        <link href="{% static 'css/webdefault.css' %}" type="text/css" rel="stylesheet" />
+        <title>Invalid Entries</title>
+    </head>
+    <body id="errorPage">
+        <h1>Invalid Entry!</h1>
+        <div id="error"></div>
+        <script type="text/javascript">
+            onLoad();
+        </script>
+        <input type="button" title="Close Window" value="Close Window" onclick="closeWindow()"/>
+    </body>
+</html>

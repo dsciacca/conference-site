@@ -1,0 +1,47 @@
+{% extends "navigation.html" %}
+<!--    Name: David Sciacca
+        Assignment: CS336 Assignment #9 Conference Web Site with Django
+        Created: July 26, 2017
+        Updated: August 20, 2017
+        Description: Home page for the conference web site   -->
+{% load staticfiles %}
+{% block title %}Conference Home{% endblock %}
+{% block metatags %}
+        <meta name="keywords" content="conference, training, business" />
+        <meta name="description" content="Business training conference" />
+        <meta name="robots" content="nofollow" />
+{% endblock %}
+{% block content %}
+    <div class="home">
+        <main>
+            <h1>Skill Boosting Conference</h1>
+            <h3>September 1, 2017</h3>
+            <!-- image retrieved from: https://farm9.staticflickr.com/8148/7612736864_896fba0b08_b.jpg -->
+            <img  src="{% static 'img/denverMtns.jpg'%}" alt="Evening view of Denver, CO with snowy mountains in background"
+                  title="Denver, CO Skyline" width="512" height="320" class="img"/>
+            <p>
+                This conference, which will be hosted in Denver, CO, is intended for new and existing employees to gain
+                training as well as boost already existing skills for the improvement of our business. We will have
+                popular keynote speakers and three sessions of three workshops for a total of nine overall workshops
+                for employees to select from. Here, employees will get a chance to improve a wide range of skills from
+                computer skills to overall productivity improvement skills. We look forward to seeing you there!
+            </p>
+        </main>
+        <footer>
+            <address>
+                <small>
+                    Contact Information: <br />
+                    Phone: (555) 555-5555 <br />
+                    Email: <a href="mailto:skillsimprovement@conference.org">skillsimprovement@conference.org</a>
+                </small>
+            </address>
+            <small>
+                <p class="disclaimer">
+                    While this web site was created to satisfy the requirement of building a web site for an academic
+                    course at Regis University, the views and opinions expressed on this web site are solely those of
+                    the original author and do not necessarily represent the views and opinions of Regis University.
+                </p>
+            </small>
+        </footer>
+    </div>
+{% endblock %}

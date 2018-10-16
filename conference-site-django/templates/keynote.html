@@ -1,0 +1,53 @@
+{% extends "navigation.html" %}
+<!--    Name: David Sciacca
+        Assignment: CS336 Assignment #9 Conference Web Site with Django
+        Created: July 26, 2017
+        Updated: August 20, 2017
+        Description: List and descriptions of conference keynote speakers for conference web site   -->
+{% load staticfiles %}
+{% block title %}Conference Keynote Speakers{% endblock %}
+{% block metatags %}
+        <meta name="keywords" content="keynote, speakers, conference, professional" />
+        <meta name="description" content="List and descriptions of the business training conference keynote speakers" />
+        <meta name="robots" content="nofollow" />
+{% endblock %}
+{% block content %}
+        <main>
+            <h1>Keynote Speakers</h1>
+            <div class="keynote">
+                <!-- image obtained from: https://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg -->
+                <img src="{% static 'img/billgates.jpeg' %}" alt="Picture of Bill Gates" title="Bill Gates" width="400" height="400" />
+                <h3>Bill Gates</h3>
+                <p>
+                    None other than Bill Gates will be joining us as one of our two keynote speakers. The founder of
+                    Microsoft will be helping us explore technology in the modern era while explaining his rise to one
+                    of the worlds wealthiest and most well known techies.
+                </p>
+            </div>
+            <div class="keynote">
+                <!-- image obtained from: https://specials-images.forbesimg.com/imageserve/5735f1e44bbe6f636184ff7e/416x416.jpg?background=000000&cropX1=34&cropX2=697&cropY1=23&cropY2=686 -->
+                <img src="{% static 'img/melindagates.jpg' %}" alt="Picture of Melinda Gates" title="Melinda Gates" width="400"
+                     height="400" />
+                <h3>Melinda Gates</h3>
+                <p>Joining us as one of our keynote speakers will be Melinda Gates. Co-founder of the Bill and Melinda
+                    Gates Foundation, Melinda will be talking with us about the importance of philanthropy in today's
+                    world, and how best to be charitable.</p>
+            </div>
+        </main>
+        <footer>
+            <address>
+                <small>
+                    Contact Information: <br />
+                    Phone: (555) 555-5555 <br />
+                    Email: <a href="mailto:skillsimprovement@conference.org">skillsimprovement@conference.org</a>
+                </small>
+            </address>
+            <small>
+                <p class="disclaimer">
+                    While this web site was created to satisfy the requirement of building a web site for an academic
+                    course at Regis University, the views and opinions expressed on this web site are solely those of
+                    the original author and do not necessarily represent the views and opinions of Regis University.
+                </p>
+            </small>
+        </footer>
+{% endblock %}

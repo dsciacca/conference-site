@@ -1,0 +1,53 @@
+{% extends "navigation.html" %}
+<!--    Name: David Sciacca
+        Assignment: CS336 Assignment #8 Conference Web Site with Python
+        Created: July 26, 2017
+        Updated: August 4, 2017
+        Description: Polling page for users to vote on conference champ   -->
+{% load staticfiles %}
+{% block title %}Poll{% endblock %}
+{% block metatags %}
+        <meta name="keywords" content="poll" />
+        <meta name="description" content="Polling page displaying that poll will be available soon" />
+        <meta name="robots" content="noindex" />
+{% endblock %}
+{% block content %}
+        <main>
+            <h1>Vote for Conference Champ!</h1>
+            <form>
+                <fieldset>
+                    <legend>
+                        Poll:
+                    </legend>
+                    <label>
+                        <span>Who do <em>you</em> think deserves the title of <b>Conference Champ</b>?</span>
+                        <br/>
+                        <input type="radio" name="confchamp" value="janedoe" title="A selection is required"
+                               id="janedoe" required/>Jane Doe, current votes = <span id="janevotes"></span>
+                        <input type="radio" name="confchamp" value="joeshmoe" title="A selection is required"
+                               id="joeshmoe"/>Joe Shmoe, current votes = <span id="joevotes"></span>
+                        <input type="radio" name="confchamp" value="rondarae" title="A selection is required"
+                               id="rondarae"/>Ronda Rae, current votes = <span id="rondavotes"></span>
+                        <br/>
+                        <input type="submit" value="Submit Poll" class="submit" id="pollsubmit"/>
+                    </label>
+                </fieldset>
+            </form>
+        </main>
+        <footer>
+            <address>
+                <small>
+                    Contact Information: <br />
+                    Phone: (555) 555-5555 <br />
+                    Email: <a href="mailto:skillsimprovement@conference.org">skillsimprovement@conference.org</a>
+                </small>
+            </address>
+            <small>
+                <p class="disclaimer">
+                    While this web site was created to satisfy the requirement of building a web site for an academic
+                    course at Regis University, the views and opinions expressed on this web site are solely those of
+                    the original author and do not necessarily represent the views and opinions of Regis University.
+                </p>
+            </small>
+        </footer>
+{% endblock %}

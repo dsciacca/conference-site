@@ -1,0 +1,66 @@
+{% extends "navigation.html" %}
+<!--    Name: David Sciacca
+        Assignment: CS336 Assignment #10 Conference Web Site with Django
+        Created: July 26, 2017
+        Updated: August 27, 2017
+        Description: Awards page for conference web site   -->
+{% load staticfiles %}
+{% block title %}Conference Awards{% endblock %}
+{% block metatags %}
+        <meta name="keywords" content="awards, conference" />
+        <meta name="description" content="Conference awards page" />
+        <meta name="robots" content="noindex" />
+{% endblock %}
+{% block content %}
+        <main>
+            <h1>Vote for Conference Champ!</h1>
+            <form action="awards" method="post">{% csrf_token %}
+                <table>
+                    <tr>
+                        <th>Picture</th>
+                        <th class="name-col">Name</th>
+                        <th>Description</th>
+                        <th>Current Votes</th>
+                        <th>Vote</th>
+                    </tr>
+                    {% for award in allAwards %}
+                        <tr>
+                            <td>
+                                <img src="{% static award.imgname %}" class="tableImage" alt="{{ award.name }}" width="300"
+                                    height="200"/>
+                            </td>
+                            <td>{{ award.name }}</td>
+                            <td>{{ award.description }}</td>
+                            <td>{{ award.currvotes }}</td>
+                            <td>
+                                <input type="radio" name="poll" value="{{ award.name }}" title="{{ award.name }}" required/>
+                                <span>Vote for {{ award.name }}</span>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    <tr>
+                        <td colspan="4"></td>
+                        <td>
+                            <input type="submit" value="Vote" id="pollsubmit"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </main>
+        <footer>
+            <address>
+                <small>
+                    Contact Information: <br />
+                    Phone: (555) 555-5555 <br />
+                    Email: <a href="mailto:skillsimprovement@conference.org">skillsimprovement@conference.org</a>
+                </small>
+            </address>
+            <small>
+                <p class="disclaimer">
+                    While this web site was created to satisfy the requirement of building a web site for an academic
+                    course at Regis University, the views and opinions expressed on this web site are solely those of
+                    the original author and do not necessarily represent the views and opinions of Regis University.
+                </p>
+            </small>
+        </footer>
+{% endblock %}

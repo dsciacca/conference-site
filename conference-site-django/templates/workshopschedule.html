@@ -1,0 +1,61 @@
+{% extends "navigation.html" %}
+<!--    Name: David Sciacca
+        Assignment: CS336 Assignment #10 Conference Web Site with Django
+        Created: July 26, 2017
+        Updated: August 27, 2017
+        Description: List and descriptions of available workshops at the conference for conference web site    -->
+{% load staticfiles %}
+{% block title %}Workshop Schedule{% endblock %}
+{% block metatags %}
+        <meta name="keywords" content="workshops, training, conference" />
+        <meta name="description" content="List and descriptions of available workshops at the business training
+         conference" />
+        <meta name="robots" content="nofollow" />
+{% endblock %}
+{% block content %}
+        <main>
+            <h1>Workshop Schedule</h1>
+            <table>
+                <tr>
+                    <th>Workshop Session</th>
+                    <th>Topic</th>
+                    <th>Room/Location</th>
+                    <th>Time</th>
+                </tr>
+                {% for workshop in  allWorkshops%}
+                    {% if forloop.counter == 2 %}
+                        <tr class="even">
+                    {% elif forloop.counter == 4 %}
+                        <tr class="even">
+                    {% elif forloop.counter == 6 %}
+                        <tr class="even">
+                    {% elif forloop.counter == 8 %}
+                        <tr class="even">
+                    {% else %}
+                        <tr>
+                    {% endif %}
+                        <td>{{ workshop.session }}</td>
+                        <td>{{ workshop.title }}</td>
+                        <td>{{ workshop.roomnumber }}</td>
+                        <td>{{ workshop.starttime }} - {{ workshop.endtime }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </main>
+        <footer>
+            <address>
+                <small>
+                    Contact Information: <br />
+                    Phone: (555) 555-5555 <br />
+                    Email: <a href="mailto:skillsimprovement@conference.org">skillsimprovement@conference.org</a>
+                </small>
+            </address>
+            <small>
+                <p class="disclaimer">
+                    While this web site was created to satisfy the requirement of building a web site for an academic
+                    course at Regis University, the views and opinions expressed on this web site are solely those of
+                    the original author and do not necessarily represent the views and opinions of Regis University.
+                </p>
+            </small>
+        </footer>
+{% endblock %}

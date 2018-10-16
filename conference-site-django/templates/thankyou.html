@@ -1,0 +1,59 @@
+{% extends "navigation.html" %}
+<!--    Name: David Sciacca
+        Assignment: CS336 Assignment #10 Conference Web Site with Django
+        Created: July 26, 2017
+        Updated: August 27, 2017
+        Description: Thank you page displayed after user registers   -->
+{% load staticfiles %}
+{% block title %}Thank You{% endblock %}
+{% block metatags %}
+        <meta name="keywords" content="thank you" />
+        <meta name="description" content="Thank you for registering" />
+        <meta name="robots" content="noindex" />
+{% endblock %}
+{% block content %}
+        <main>
+            <h1>
+                Registration successful! Thank you for registering with us, we look forward to seeing you at the
+                conference!
+            </h1>
+            <h3>New Registrant Info Summary for Registrant ID: {{ new_registrant.pk }} </h3>
+            <h4>Personal Info: </h4>
+            <p>Name: {{ new_registrant.title }} {{ new_registrant.firstname }} {{ new_registrant.lastname }}</p>
+            <p>Address: <br/>{{ new_registrant.street_address_1 }}
+                {% if new_registrant.street_address_2 != None %}
+                    <br/>{{ new_registrant.street_address_2 }}
+                {% endif %}
+                <br/>
+                {{ new_registrant.city }} {{ new_registrant.state }} {{ new_registrant.zipcode }}</p>
+            <p>Telephone: {{ new_registrant.telephone }}</p>
+            <p>Email Address: {{ new_registrant.email }}</p>
+            <p>Website: {{ new_registrant.website }}</p>
+            <p>Company and Position at Company: {{ new_registrant.company }}, {{ new_registrant.position }}</p>
+            <p>Meal Plan: {{ new_registrant.meals }}</p>
+            <h4>Billing Info: </h4>
+            <p>Name: {{ new_registrant.billing_firstname }} {{ new_registrant.billing_lastname }}</p>
+            <p>Card Type: {{ new_registrant.card_type }}</p>
+            <p>Card Expiration: {{ new_registrant.exp_month }}/{{ new_registrant.exp_year }}</p>
+            <h4>Workshop Info: </h4>
+            <p>Session 1: {{ new_registrant.session1 }}</p>
+            <p>Session 2: {{ new_registrant.session2 }}</p>
+            <p>Session 3: {{ new_registrant.session3 }}</p>
+        </main>
+        <footer>
+            <address>
+                <small>
+                    Contact Information: <br />
+                    Phone: (555) 555-5555 <br />
+                    Email: <a href="mailto:skillsimprovement@conference.org">skillsimprovement@conference.org</a>
+                </small>
+            </address>
+            <small>
+                <p class="disclaimer">
+                    While this web site was created to satisfy the requirement of building a web site for an academic
+                    course at Regis University, the views and opinions expressed on this web site are solely those of
+                    the original author and do not necessarily represent the views and opinions of Regis University.
+                </p>
+            </small>
+        </footer>
+{% endblock %}

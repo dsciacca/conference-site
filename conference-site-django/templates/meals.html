@@ -1,0 +1,51 @@
+{% extends "navigation.html" %}
+<!--    Name: David Sciacca
+        Assignment: CS336 Assignment #9 Conference Web Site with Django
+        Created: July 26, 2017
+        Updated: August 20, 2017
+        Description: Conference website meals page listing meal options   -->
+{% load staticfiles %}
+{% block title %}Conference Meals Menu{% endblock %}
+{% block metatags %}
+        <meta name="keywords" content="meals, options, conference, menu" />
+        <meta name="description" content="List of meal options available at the business training conference" />
+        <meta name="robots" content="noindex" />
+{% endblock %}
+{% block content %}
+        <main>
+            <div class="menu" id="menu1">
+                <!-- menu icon obtained from: http://thebuddhabistro.com/wp-content/uploads/2016/05/menuicon.png -->
+                <img src="{% static 'img/menuicon.png' %}" alt="Menu Day 1 Icon" width="225" height="150"/>
+                <h4>Day 1 Menu</h4>
+                <p>Breakfast <br/>Pastries, Fruit, Juice, Coffee</p>
+                <p>Lunch <br/>Sandwiches, Chips, Tea, Water</p>
+                <p>Dinner <br/>Salad, Chicken, Rice, Beer, Wine, Brownies</p>
+            </div>
+            <div class="menu" id="menu2">
+                <!-- menu icon obtained from: http://orgjunkie.com/wp-content/uploads/2007/10/menu.jpg-->
+                <img src="{% static 'img/menuicon2.jpg' %}" alt="Menu Day 2 Icon" width="225" height="150"/>
+                <h4>Day 2 Menu</h4>
+                <p>Breakfast <br/>Pastries, Fruit, Juice, Coffee</p>
+                <p>Lunch <br/>Sandwiches, Chips, Tea, Water</p>
+                <p>Dinner <br/>Salad, Steak, Potatoes, Beer, Wine, Cheesecake</p>
+            </div>
+            <p id="prices">Full Meal Package: $225.00 (Includes Day 2 Dinner) <br /> Day 2 Dinner Only:
+                $75.00</p>
+        </main>
+        <footer>
+            <address>
+                <small>
+                    Contact Information: <br />
+                    Phone: (555) 555-5555 <br />
+                    Email: <a href="mailto:skillsimprovement@conference.org">skillsimprovement@conference.org</a>
+                </small>
+            </address>
+            <small>
+                <p class="disclaimer">
+                    While this web site was created to satisfy the requirement of building a web site for an academic
+                    course at Regis University, the views and opinions expressed on this web site are solely those of
+                    the original author and do not necessarily represent the views and opinions of Regis University.
+                </p>
+            </small>
+        </footer>
+{% endblock %}

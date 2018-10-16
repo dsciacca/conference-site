@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--    Name: David Sciacca
+        Assignment: CS336 Assignment #9 Conference Web Site with Django
+        Created: July 26, 2017
+        Updated: August 20, 2017
+        Description: Base Navigation template for entire website - all other pages extend this   -->
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <title>{% block title %}Title{% endblock %}</title>
+    <link href="{% static 'css/webdefault.css' %}" type="text/css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="author" content="David Sciacca" />
+    {% block metatags %}
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'awards' %}">Awards</a>
+            <a href="{% url 'activities' %}">Activities</a>
+            <a href="{% url 'meals' %}">Meals</a>
+            <a href="{% url 'keynote' %}">Keynote</a>
+            <a href="{% url 'workshopschedule' %}">Workshop Schedule</a>
+            <a href="{% url 'registration' %}">Registration</a>
+            <a href="admin">Admin</a>
+            {% block nav %}
+            {% endblock %}
+        </nav>
+    </header>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

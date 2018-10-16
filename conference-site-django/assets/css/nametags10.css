@@ -1,0 +1,56 @@
+div{
+    width: 76mm;
+    height: 50mm;
+    text-align: center;
+    border: thin solid black;
+}
+
+div.top{
+    margin-top: 15mm;
+}
+
+div.bottom{
+    margin-bottom: 15mm;
+}
+
+div.left{
+    position: absolute;
+    left: 30mm;
+}
+
+div.right{
+    position: absolute;
+    left: 106mm;
+    margin-right: 30mm;
+}
+
+.container{
+    border: none;
+    width: 100%;
+}
+
+.topContainer{
+    border: none;
+    width: 100%;
+    margin-top: 15mm;
+}
+
+.name{
+    font-size: 22px;
+    color: green;
+    font-weight: bold;
+}
+
+.position{
+    font-size: 12px;
+    font-weight: bold;
+    color: red;
+}
+
+.company{
+    font-size: 12px;
+}
+
+.location{
+    font-size: 12px;
+}

@@ -1,0 +1,45 @@
+{% extends "navigation.html" %}
+<!--    Name: David Sciacca
+        Assignment: CS336 Assignment #9 Conference Web Site with Django
+        Created: July 26, 2017
+        Updated: August 20, 2017
+        Description: Activities for conference goers outside of the conference   -->
+{% load staticfiles %}
+{% block title %}Activities Outside of Conference{% endblock %}
+{% block metatags %}
+        <meta name="keywords" content="activities, conference" />
+        <meta name="description" content="" />
+        <meta name="robots" content="noindex" />
+{% endblock %}
+{% block content %}
+        <main>
+            <h1>Activities in Denver Outside of the Conference</h1>
+            <ul>
+                <li>16<sup>th</sup> Street Mall</li>
+                <li><a href="http://denverartmuseum.org/" target="_blank">Denver Art Museum</a></li>
+                <li><a href="https://www.elitchgardens.com/" target="_blank">Elitch Gardens</a></li>
+            </ul>
+            <div>
+                <iframe width="426" height="240" src="https://www.youtube.com/embed/6JQJHLpGM7Q" frameborder="0"
+                        allowfullscreen id="video">
+                    Elitch Gardens New Ride Promo Video
+                </iframe>
+            </div>
+        </main>
+        <footer>
+            <address>
+                <small>
+                    Contact Information: <br />
+                    Phone: (555) 555-5555 <br />
+                    Email: <a href="mailto:skillsimprovement@conference.org">skillsimprovement@conference.org</a>
+                </small>
+            </address>
+            <small>
+                <p class="disclaimer">
+                    While this web site was created to satisfy the requirement of building a web site for an academic
+                    course at Regis University, the views and opinions expressed on this web site are solely those of
+                    the original author and do not necessarily represent the views and opinions of Regis University.
+                </p>
+            </small>
+        </footer>
+ {% endblock %}

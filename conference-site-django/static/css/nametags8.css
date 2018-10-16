@@ -1,0 +1,55 @@
+div{
+    text-align: center;
+    height: 59mm;
+    width: 86mm;
+    border: thin solid black;
+    margin: 2.25mm 4.5mm;
+}
+
+div.bottom{
+    margin-bottom: 14mm;
+}
+
+div.left{
+    position: absolute;
+    left: 17mm;
+}
+
+div.right{
+    position: absolute;
+    left: 112mm;
+    margin-right: 17mm;
+}
+
+.container{
+    border: none;
+    width: 100%;
+    margin: 4.5mm;
+}
+
+.topContainer{
+    border: none;
+    width: 100%;
+    margin-top: 14mm;
+}
+.firstname{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.lastname{
+    font-size: 12px;
+}
+
+.position{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.company{
+    font-size: 12px;
+}
+
+.location{
+    font-size: 12px;
+}
