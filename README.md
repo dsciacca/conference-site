@@ -41,8 +41,8 @@ A step by step series of examples that tell you how to get a development env run
   Starting development server at http://127.0.0.1:8000/
   Quit the server with CONTROL-C.
   ```
-  4. navigate browswer to web address displayed in above step:
+  4. navigate browser to web address displayed in above step:
   ```
   http://127.0.0.1:8000/
   ```
-  5. When done, quit the servier using CONTROL-C at the command line
+  5. When done, quit the server using CONTROL-C at the command line
