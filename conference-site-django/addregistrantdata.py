@@ -39,7 +39,6 @@ try:
             person.save()
             count = count + 1
         print(str(count) + " registrants added to the database.")
-        console.log
 except IOError as e:
     print("Unable to open file " + dataPath)
     quit(1)
